@@ -1,0 +1,19 @@
+{
+  "name": "cryptofetch",
+  "version": "1.0.0",
+  "description": "A Server Side Application to fetch Crypto Details of a User",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Return-name/CryptoFetch.git"
+  },
+  "author": "Rishabh Anand",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Return-name/CryptoFetch/issues"
+  },
+  "homepage": "https://github.com/Return-name/CryptoFetch#readme"
+}
