@@ -4,6 +4,8 @@
   "description": "A Server Side Application to fetch Crypto Details of a User",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "devStart": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
