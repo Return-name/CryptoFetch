@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Return-name/CryptoFetch/issues"
   },
-  "homepage": "https://github.com/Return-name/CryptoFetch#readme"
+  "homepage": "https://github.com/Return-name/CryptoFetch#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
