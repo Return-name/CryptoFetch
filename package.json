@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A Server Side Application to fetch Crypto Details of a User",
   "main": "index.js",
-  "engine": {
+  "engines": {
     "node": "18.15.0"
   },
   "scripts": {
