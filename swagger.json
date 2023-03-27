@@ -96,22 +96,22 @@
           "type": "object",
           "properties": {
             "blockNumber": {
-              "type": "string"
+              "type": "number"
             },
             "timeStamp": {
-              "type": "string"
+              "type": "number"
             },
             "hash": {
               "type": "string"
             },
             "nonce": {
-              "type": "string"
+              "type": "number"
             },
             "blockHash": {
               "type": "string"
             },
             "transactionIndex": {
-              "type": "string"
+              "type": "number"
             },
             "from": {
               "type": "string"
@@ -120,19 +120,19 @@
               "type": "string"
             },
             "value": {
-              "type": "string"
+              "type": "number"
             },
             "gas": {
-              "type": "string"
+              "type": "number"
             },
             "gasPrice": {
-              "type": "string"
+              "type": "number"
             },
             "isError": {
-              "type": "string"
+              "type": "number"
             },
             "txreceipt_status": {
-              "type": "string"
+              "type": "number"
             },
             "input": {
               "type": "string"
@@ -141,13 +141,13 @@
               "type": "string"
             },
             "cumulativeGasUsed": {
-              "type": "string"
+              "type": "number"
             },
             "gasUsed": {
-              "type": "string"
+              "type": "number"
             },
             "confirmations": {
-              "type": "string"
+              "type": "number"
             },
             "methodId": {
               "type": "string"

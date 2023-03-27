@@ -4,11 +4,11 @@ module.exports = mongoose => {
       mongoose.Schema(
         {
           blockNumber: {
-            type: String,
+            type: Number,
             required: true
           },
           timeStamp: {
-            type: String,
+            type: Number,
             required: true
           },
           hash: {
@@ -16,7 +16,7 @@ module.exports = mongoose => {
             required: true
           },
           nonce: {
-            type: String,
+            type: Number,
             required: true
           },
           blockHash: {
@@ -24,7 +24,7 @@ module.exports = mongoose => {
             required: true
           },
           transactionIndex: {
-            type: String,
+            type: Number,
             required: true
           },
           from: {
@@ -36,23 +36,23 @@ module.exports = mongoose => {
             required: true
           },
           value: {
-            type: String,
+            type: Number,
             required: true
           },
           gas: {
-            type: String,
+            type: Number,
             required: true
           },
           gasPrice: {
-            type: String,
+            type: Number,
             required: true
           },
           isError: {
-            type: String,
+            type: Number,
             required: true
           },
           txreceipt_status: {
-            type: String,
+            type: Number,
             required: true
           },
           input: {
@@ -64,15 +64,15 @@ module.exports = mongoose => {
             required: false
           },
           cumulativeGasUsed: {
-            type: String,
+            type: Number,
             required: true
           },
           gasUsed: {
-            type: String,
+            type: Number,
             required: true
           },
           confirmations: {
-            type: String,
+            type: Number,
             required: true
           },
           methodId: {
