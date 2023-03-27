@@ -6,7 +6,7 @@ exports.get = async (req, res) => {
     const userAddress = req.params.userAddress;
     const transactions = (await transactionServices.fetchAll(userAddress));
 
-    if (!transactions.result.length) {
+    if (transactions.message === "NOTOK") {
         res.status(404).json({ error: "No Transactions found" });
         return;
     }
