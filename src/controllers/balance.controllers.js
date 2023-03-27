@@ -4,10 +4,15 @@ const db = require("../models");
 
 exports.get = async (req, res) => {
     const userAddress = req.params.userAddress;
-    const transactions = (await transactionServices.fetchAll(userAddress)).result;
+    const transactions = (await transactionServices.fetchAll(userAddress));
+
+    if (!transactions.result.length) {
+        res.status(404).json({ error: "No Transactions found" });
+        return;
+    }
 
     let balance = 0;
-    transactions.map((txn) => {
+    transactions.result.map((txn) => {
         if (txn.from === userAddress) {
             balance -= Number(txn.value);
         }
