@@ -6,7 +6,7 @@ require('dotenv').config();
 
 const db = require("./src/models");
 
-require("./src/routes/transaction.routes")(app);
+require("./src/routes")(app);
 
 require("./src/services");
 

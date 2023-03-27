@@ -11,7 +11,7 @@ exports.fetchAll = async (userAddress) => {
         startblock: 0,
         endblock: 99999999,
         page: 1,
-        offset: 10,
+        offset: 10000,
         sort: "asc",
         apikey: process.env.API_KEY
     }
