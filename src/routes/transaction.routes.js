@@ -5,6 +5,5 @@ module.exports = app => {
   
     router.get("/:userAddress", transactions.getAll);
 
-
     app.use('/api/transactions', router);
 }

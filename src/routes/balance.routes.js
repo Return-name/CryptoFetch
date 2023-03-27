@@ -5,6 +5,5 @@ module.exports = app => {
   
     router.get("/:userAddress", balance.get);
 
-
     app.use('/api/balance', router);
 }
