@@ -1,0 +1,179 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "CryptoFetch",
+    "description": "A Server Side Application to fetch Crypto Details of a User",
+    "contact": {
+      "email": "rishabha649@gmail.com"
+    },
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "tags": [
+    {
+      "name": "transactions"
+    },
+    {
+      "name": "balance"
+    }
+  ],
+  "paths": {
+    "/api/transactions/{userAddress}": {
+      "get": {
+        "tags": [
+          "transactions"
+        ],
+        "summary": "Fetch transactions by userAddress",
+        "description": "Returns all transactions of the user",
+        "parameters": [
+          {
+            "name": "userAddress",
+            "in": "path",
+            "description": "Address of the user",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Transactions"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Address not found"
+          }
+        }
+      }
+    },
+    "/api/balance/{userAddress}": {
+      "get": {
+        "tags": [
+          "balance"
+        ],
+        "summary": "Fetch balance of a user and Ethereum value",
+        "description": "Returns balance of the user and current price of Ethereum",
+        "parameters": [
+          {
+            "name": "userAddress",
+            "in": "path",
+            "description": "Address of the user",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BalanceAPIResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Address not found"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Transactions": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "blockNumber": {
+              "type": "string"
+            },
+            "timeStamp": {
+              "type": "string"
+            },
+            "hash": {
+              "type": "string"
+            },
+            "nonce": {
+              "type": "string"
+            },
+            "blockHash": {
+              "type": "string"
+            },
+            "transactionIndex": {
+              "type": "string"
+            },
+            "from": {
+              "type": "string"
+            },
+            "to": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "gas": {
+              "type": "string"
+            },
+            "gasPrice": {
+              "type": "string"
+            },
+            "isError": {
+              "type": "string"
+            },
+            "txreceipt_status": {
+              "type": "string"
+            },
+            "input": {
+              "type": "string"
+            },
+            "contractAddress": {
+              "type": "string"
+            },
+            "cumulativeGasUsed": {
+              "type": "string"
+            },
+            "gasUsed": {
+              "type": "string"
+            },
+            "confirmations": {
+              "type": "string"
+            },
+            "methodId": {
+              "type": "string"
+            },
+            "functionName": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "BalanceAPIResponse": {
+        "type": "object",
+        "properties": {
+          "balance": {
+            "type": "number"
+          },
+          "ethereum_price": {
+            "type": "integer"
+          }
+        }
+      }
+    }
+  }
+}
