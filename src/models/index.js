@@ -7,5 +7,6 @@ const db = {};
 db.mongoose = mongoose;
 db.url = dbConfig.url;
 db.transactions = require("./transaction.model.js")(mongoose);
+db.prices = require("./price.model.js")(mongoose);
 
 module.exports = db;
