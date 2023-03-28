@@ -9,8 +9,8 @@ const updateEthereumPrice = async () => {
 
     const price = await priceServices.fetchPrice("ethereum");
 
-    const query = { name: "ethereum" },
-          update = { name: "ethereum", price: price.ethereum.inr},
+    const query = { _id: "ethereum" },
+          update = { _id: "ethereum", name: "ethereum", price: price.ethereum.inr},
           options = { upsert: true, new: true, setDefaultsOnInsert: true};
 
     Price.findOneAndUpdate(query, update, options)
