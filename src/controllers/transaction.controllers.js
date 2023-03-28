@@ -8,7 +8,10 @@ exports.getAll = async (req, res) => {
     const transactions = await transactionServices.fetchAll(userAddress);
 
     if (transactions.message === 'OK') {
-        Transactions.insertMany(transactions.result)
+        const transactionsWithID = transactions.result.map((txn) => ({...txn, _id: txn.hash}));
+        Transactions
+            .insertMany(transactionsWithID, {ordered : false })
+            .catch( err => {});
         res.json({ "Transactions": transactions.result});
     }
     else {

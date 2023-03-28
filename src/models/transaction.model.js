@@ -3,6 +3,10 @@ module.exports = mongoose => {
       "transaction",
       mongoose.Schema(
         {
+          _id: {
+            type: String,
+            required: true
+          },
           blockNumber: {
             type: Number,
             required: true
